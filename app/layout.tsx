@@ -8,6 +8,8 @@ import { cn } from "@/common/libs/cn";
 
 import "./globals.css";
 
+import Layouts from "@/common/components/layouts";
+
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
 const fontHeading = localFont({
@@ -29,12 +31,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen font-sans antialiased",
+          "min-h-screen bg-white-500 font-sans antialiased",
           fontSans.variable,
           fontHeading.variable,
         )}
       >
-        {children}
+        <Layouts>{children}</Layouts>
       </body>
     </html>
   );
